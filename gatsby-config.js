@@ -13,14 +13,14 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
-    {
-      resolve: "gatsby-plugin-piwik-pro",
-      options: {
-          containerUrl: "https://bemergroup.piwik.pro/",
-          siteId: "1cbc6598-083c-42f5-8798-a95d58c2a53b",
-          enabled: true
-      },
-  },
+  //   {
+  //     resolve: "gatsby-plugin-piwik-pro",
+  //     options: {
+  //         containerUrl: "https://bemergroup.piwik.pro/",
+  //         siteId: "1cbc6598-083c-42f5-8798-a95d58c2a53b",
+  //         enabled: true
+  //     },
+  // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

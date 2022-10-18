@@ -1,10 +1,22 @@
 // custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+require( "typeface-montserrat")
+require( "typeface-merriweather")
 // normalize CSS across browsers
-import "./src/normalize.css"
+require( "./src/normalize.css")
 // custom CSS styles
-import "./src/style.css"
+require( "./src/style.css")
 
 // Highlighting for code blocks
-import "prismjs/themes/prism.css"
+require( "prismjs/themes/prism.css")
+
+
+const PiwikPro = require("@piwikpro/react-piwik-pro").default;
+const { PageViews } = require("@piwikpro/react-piwik-pro");
+
+exports.onClientEntry = (_, pluginOptions) => {
+        PiwikPro.initialize('1cbc6598-083c-42f5-8798-a95d58c2a53b', 'https://bemergroup.piwik.pro');
+};
+
+exports.onRouteUpdate = ({ location, prevLocation }) => {
+    PageViews.trackPageView(location);
+};
