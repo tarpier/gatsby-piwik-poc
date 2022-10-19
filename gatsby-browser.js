@@ -20,5 +20,9 @@ exports.onClientEntry = () => {
 
 exports.onRouteUpdate = ({ location, prevLocation }) => {
     console.log('pageview', {location}, {prevLocation})
-    // PageViews.trackPageView('onRouteUpdate');
+    // don't track pageview if there is no previous location
+    // this only happens on page entry and that is handled through initialize
+    if(prevLocation){
+        PageViews.trackPageView(location);
+    }
 };
