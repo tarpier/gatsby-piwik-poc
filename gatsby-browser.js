@@ -18,7 +18,7 @@ exports.onClientEntry = () => {
     PiwikPro.initialize('1cbc6598-083c-42f5-8798-a95d58c2a53b', 'https://bemergroup.piwik.pro');
 };
 
-exports.onRouteUpdate = ({ location, prevLocation }) => {
-    console.log('pageview', location)
-    PageViews.trackPageView(location);
-};
+// exports.onRouteUpdate = ({ location, prevLocation }) => {
+//     console.log('pageview', location)
+//     PageViews.trackPageView('onRouteUpdate');
+// };
