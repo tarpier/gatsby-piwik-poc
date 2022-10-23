@@ -23,6 +23,6 @@ exports.onRouteUpdate = ({ location, prevLocation }) => {
     // don't track pageview if there is no previous location
     // this only happens on page entry and that is handled through initialize
     if(prevLocation){
-        PageViews.trackPageView(location.pathname);
+        PageViews.trackPageView(document.title);
     }
 };
