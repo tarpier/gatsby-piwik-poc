@@ -43,12 +43,26 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
 )
 
 export const Head: HeadFC<DataProps> = () => {
-return (
-  <>
-    <Seo title="Using TypeScript" />
-    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/e39bc10f06c4.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="1"></script>
-  </>
-)
+  return (
+    <>
+      <Seo title="Using TypeScript" />
+      <script type="text/javascript">
+        {`
+        var _paq = _paq || [];
+        _paq.push(["trackPageView"]);
+        _paq.push(["enableLinkTracking"]);
+        (function() {
+          var u="https://bemergroup.piwik.pro/";
+          _paq.push(["setTrackerUrl", u+"ppms.php"]);
+          _paq.push(["setSiteId", "1cbc6598-083c-42f5-8798-a95d58c2a53b"]);
+          var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+          g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"ppms.js"; s.parentNode.insertBefore(g,s);
+        })();
+      `}
+      </script>
+      <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/e39bc10f06c4.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="1"></script>
+    </>
+  )
 }
 
 export default UsingTypescript
