@@ -34,3 +34,23 @@ const Layout = ({ location, title, children }) => {
 }
 
 export default Layout
+
+export const Head = () => {
+  return (
+    <script type="text/javascript">
+      {`
+        var _paq = _paq || [];
+        _paq.push(["trackPageView"]);
+        _paq.push(["enableLinkTracking"]);
+        (function() {
+          var u="https://bemergroup.piwik.pro/";
+          _paq.push(["setTrackerUrl", u+"ppms.php"]);
+          _paq.push(["setSiteId", "1cbc6598-083c-42f5-8798-a95d58c2a53b"]);
+          var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+          g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"ppms.js"; s.parentNode.insertBefore(g,s);
+        })();
+      `}
+</script>
+  )
+}
+
